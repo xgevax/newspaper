@@ -1,0 +1,141 @@
+body {
+	font-family: "Fondamento";
+  	background-color: #f9f7f1;
+}
+
+h1 {
+	font-size: 4.5em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 40px;
+	padding-bottom: 10px;
+}
+
+nav ul {
+	font-family: "Roboto Mono", monospace;
+	display: flex;
+	justify-content: center;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+.columns {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	margin-top: 10px;
+
+}
+
+.columns > article {
+	flex-grow: 0;
+	flex-basis: 20%;
+	text-align: center;
+	padding: 0 10px;
+}
+
+.columns article p {
+	font-family: "Roboto Mono", monospace;
+	text-align: left;
+}
+
+.rows {
+	padding: 0 24px;
+	max-width: 1500px;
+	margin: 0 auto;
+	
+}
+
+.rows p, blockquote{
+	font-family: "Roboto Mono", monospace;
+	text-align: left;
+}
+
+.rows blockquote {
+	font-size: 2.3rem;
+	margin: 1.5rem 2rem;
+}
+
+blockquote::before {content: open-quote;}
+blockquote::after {content: close-quote;}
+
+
+h2 {
+	font-size: 2rem;
+}
+
+figure {
+	margin: 0 0 12px 0;
+	text-align: center;
+}
+
+figcaption {
+	font-family: "Roboto Mono", monospace;;
+}
+
+img {
+	width: 100%;
+	filter: grayscale(100%);
+	transition: all .5s ease-in-out;
+}
+
+img:hover {
+	width: 100%;
+	filter: grayscale(0%);
+}
+
+footer {
+	font-family: "Roboto Mono", monospace;
+	text-align: center;
+	font-size: 1em;
+	margin-top: 20px;
+	padding: 5px 0;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+}
+
+
+@media (min-width: 955px) {
+	.rows {
+	  column-count: 3;
+	  column-gap: 42px;
+	  margin-top: 36px;
+	}
+  }
+
+  @media (min-width: 955px) {
+	.rows
+		p {
+		text-align: justify;
+		hyphens: auto;
+	}
+  }
+
+  @media (min-width: 955px) {
+	.rows
+		figure {
+		float: left;
+		margin-right: 24px;
+		}
+  }
+
+@media only screen and (max-width: 1024px) {
+	.columns {
+		flex-direction: column;
+	}
+
+	.columns > article {
+		padding: 0 10px;
+	}
+}
+
